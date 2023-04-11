@@ -67,3 +67,13 @@
         </ul>
     </li>
 </ul>
+<ul>
+    <li>
+        etc : <code>core-js</code>
+        <ul>
+            <li> 
+                <code>core-js</code> : ECMAScript의 새로운 기능을 지원하는 폴리필 라이브러리.
+            </li>
+        </ul>
+    </li>
+</ul>
