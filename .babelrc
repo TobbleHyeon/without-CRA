@@ -1,14 +1,14 @@
 {
   "presets": [
-    "@babel/preset-react",
+    "@babel/preset-react", //  React 애플리케이션에서 JSX 문법을 사용할 수 있도록 해주는 Babel 프리셋
     [
-      "@babel/preset-env",
+      "@babel/preset-env", // 최신 JavaScript 기능을 사용할 수 있으면서도, 지원하려는 브라우저의 버전에 따라 자동으로 코드 변환을 처리할 수 있도록 해주는 Babel 프리셋
       {
-        "modules": false,
-        "useBuiltIns": "usage",
-        "corejs": 3
+        "modules": false, // false로 설정하면 ES 모듈을 사용하도록 설정. 이렇게 함으로써 Webpack과 같은 번들러에서 Tree-Shaking(사용하지 않는 코드를 자동으로 제거하여 번들 사이즈를 줄이는 것, 웹 로딩속도 개선)을 지원할 수 있음.
+        "useBuiltIns": "usage", // usage로 설정하면, 사용되는 JavaScript 기능에 대한 폴리필(polyfill)을 자동으로 추가해줌. 이렇게 함으로써 필요한 폴리필(최신 JavaScript API를 사용할 수 있도록 구형 브라우저에서 이전 버전의 JavaScript 구현체를 제공하는 것, 브라우저 호환성 개선)만 추가할 수 있음.
+        "corejs": 3 // ECMAScript 6부터 13까지의 폴리필을 제공, 종류는 2,3 이 있음. 2는 ECMAScript 6부터 7까지의 폴리필을 제공.
       }
     ],
-    "@babel/preset-typescript"
+    "@babel/preset-typescript" // TypeScript 코드를 JavaScript 코드로 변환할 수 있도록 해주는 Babel 프리셋
   ]
 }
