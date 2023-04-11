@@ -77,3 +77,29 @@
         </ul>
     </li>
 </ul>
+
+4. <pre>touch .babelrc</pre>
+
+- .babelrc 내에 코드 추가,
+  각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.
+
+<ul>
+    <li>
+<pre>
+{
+    "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-typescript"
+  ]
+}
+</pre>
+    </li>
+</ul>
