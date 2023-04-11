@@ -80,11 +80,14 @@
 
 4. <pre>touch .babelrc</pre>
 
-- .babelrc 내에 코드 추가,
-  각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.
-
 <ul>
     <li>
+    .babelrc 내에 코드 추가,
+  각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.
+
+    </li>
+    <li>
+
 <pre>
 {
     "presets": [
@@ -101,5 +104,7 @@
   ]
 }
 </pre>
+
     </li>
+
 </ul>
