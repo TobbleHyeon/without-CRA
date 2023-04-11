@@ -82,13 +82,10 @@
 
 <ul>
     <li>
-    .babelrc 내에 코드 추가,
-  각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.
-
-    </li>
-    <li>
-
-<pre>
+        .babelrc 내에 코드 추가, 각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.
+        <ul>
+            <li>
+                <pre>
 {
     "presets": [
     "@babel/preset-react",
@@ -103,8 +100,8 @@
     "@babel/preset-typescript"
   ]
 }
-</pre>
-
+                </pre>
+            </li>
+        </ul>
     </li>
-
 </ul>
