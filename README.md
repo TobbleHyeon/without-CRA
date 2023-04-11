@@ -1,10 +1,10 @@
 # without-CRA
 
-### 초기환경 구성
+### typescript + sass 기반 초기환경 셋팅
 
 1. <pre>mkdir kill-cra-react && cd $_</pre>
 2. <pre>npm init -y</pre>
-3. webpack & babel을 구성하기 위한 Install 목록 ( typescript + sass 기반으로 운영될 리액트 기준)
+3. webpack & babel을 구성하기 위한 Install 목록
 
 - React + Typescript : <code>react react-dom typescript @types/react @types/react-dom</code><br/>
 <ul>
@@ -68,45 +68,24 @@
     </li>
 </ul>
 
-<ol>
+<ul>
+    <li>
+        etc : <code>core-js</code>
         <ul>
-            <li>
-                <ul>
-                    <li>
-                        
-                    </li>
-                    <li>
-                        
-                    </li>
-                    <li>
-                        
-                    </li>
-                    <li>
-                        
-                    </li>
-                    <li>
-                        
-                    </li>
-                </ul>
-                <br/><br/>
-            </li>
-            <li>
-                etc : <code>core-js</code>
-                 <ul>
-                    <li>
-                        <code>core-js</code> : ECMAScript의 새로운 기능을 지원하는 폴리필 라이브러리.
-                    </li>
-                </ul>
+            <li> 
+                <code>core-js</code> : ECMAScript의 새로운 기능을 지원하는 폴리필 라이브러리.
             </li>
         </ul>
     </li>
-    <br/>
+</ul>
+
+4. <pre>touch .babelrc</pre>
+
+- .babelrc 내에 코드 추가,
+각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.
+<ul>
     <li>
-        <pre>touch .babelrc</pre>
-        <ul>
-            <li>
-            .babelrc 내에 코드 추가, 각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.<br/><br/>
-            <pre>
+<pre>
 {
     "presets": [
     "@babel/preset-react",
@@ -122,26 +101,22 @@
   ]
 }
 </pre>
-            </li>
-        </ul>
     </li>
-    <br/>
+</ul>
+
+5. <pre>touch webpack.common.js webpack.dev.js webpack.prod.js</pre>
+
+- 개발환경과 배포환경을 구분지어 webpack을 설정함.
+<ul>
     <li>
-        <pre>touch webpack.common.js webpack.dev.js webpack.prod.js</pre>
-        <ul>
-        <li>개발환경과 배포환경을 구분지어 webpack을 설정함.<br/><br/></li>
-        <li>
-            webpack.config.js 내에 코드 추가 ↓ <br/>
-            mode는 환경에 초점을 두고 선택을 한다. "development || production"<br/>
-            entry는 Webpack4부터 생략이 가능함. default : "./src/index.js"<br/><br/>
-        </li>
-        <li>
-            entrys : 번들링 프로세스가 시작되는 지점.<br/>
-            output : 번들링 프로세스 종료 후, 번들링된 파일을 저장할 디렉토리와 이름 지정.<br/>
-            module : 번들링 간 사용될 규칙 설정.<br/>
-            plugins : 웹팩 번들링 간 적용할 플러그인 설정.<br/> 
-        </li>
-        </ul>
+        webpack.config.js 내에 코드 추가 ↓ <br/>
+        mode는 환경에 초점을 두고 선택을 한다. "development || production"<br/>
+        entry는 Webpack4부터 생략이 가능함. default : "./src/index.js"<br/><br/>
     </li>
-    <br/>
-</ol>
+    <li>
+        entrys : 번들링 프로세스가 시작되는 지점.<br/>
+        output : 번들링 프로세스 종료 후, 번들링된 파일을 저장할 디렉토리와 이름 지정.<br/>
+        module : 번들링 간 사용될 규칙 설정.<br/>
+        plugins : 웹팩 번들링 간 적용할 플러그인 설정.<br/> 
+    </li>
+</ul>
