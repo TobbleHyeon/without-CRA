@@ -7,8 +7,12 @@
     <li><pre>npm init -y</pre></li>
     <li><pre>npm install ~~~ / ~~~ -D</pre> 
         <ul>
-            <li>초기 install 목록 ( typescript + sass 기반으로 운영될 리액트 기준)</li>
-            <li>React + Typescript : <code>react react-dom typescript @types/react @types/react-dom</code></li>
+            <li>
+                초기 install 목록 ( typescript + sass 기반으로 운영될 리액트 기준)
+            </li>
+            <li>
+                React + Typescript : <code>react react-dom typescript @types/react @types/react-dom</code><br/><br/>
+            </li>
             <li>
                 CSS : <code>css-loader mini-css-extract-plugin sass sass-loader style-loader</code>
                 <ul>
@@ -22,6 +26,7 @@
                         <code>style-loader</code> : 스타일 시트를 자바스크립트 코드로 변환하여 동적으로 삽입.
                     </li>
                 </ul>
+                <br/><br/>
             </li>
             <li>
                 Babel : <code>@babel/cli @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-loader </code>
@@ -39,6 +44,7 @@
                         <code>babel-loader</code> : 웹팩에서 Babel을 사용할 수 있게 해주는 로더. 웹팩에서 자바스크립트 파일을 번들링하기 전에, babel-loader를 사용해서 ES6+ 문법을 ES5 문법으로 변환함.
                     </li>
                 </ul>
+                <br/><br/>
             </li>
             <li>
                 Webpack : 
@@ -63,6 +69,7 @@
                         <code>webpack-merge</code> : 웹팩 설정 파일을 합침. 개발환경, 배포환경을 웹팩을 구분하기 위함.
                     </li>
                 </ul>
+                <br/><br/>
             </li>
             <li>
                 etc : <code>core-js</code>
