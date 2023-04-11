@@ -99,8 +99,7 @@
     ],
     "@babel/preset-typescript"
   ]
-}
-                </pre>
+}</pre>
             </li>
         </ul>
     </li>
