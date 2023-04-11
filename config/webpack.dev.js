@@ -10,7 +10,7 @@ module.exports = merge(common, {
     compress: true, // 모든 항목에 대해 gzip압축 사용
     port: 3000, // server port 설정
     historyApiFallback: true,
-    liveReload: true,
+    liveReload: true, // 파일 변경이 감지되면 페이지를 다시 로드하고 새로고침
   },
   output: {
     filename: "[name].[contenthash].js",

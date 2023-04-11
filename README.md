@@ -1,6 +1,6 @@
 # without-CRA
 
-<strong>못쥐돠 욘쥔와~ 아몰랑 그냥해~ </strong>
+<strong>아몰랑 그냥해~ </strong>
 
 <ol>
     <li><pre>mkdir kill-cra-react && cd $_</pre></li>
@@ -124,4 +124,5 @@
         </li>
         </ul>
     </li>
+    <br/>
 </ol>
