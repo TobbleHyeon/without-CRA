@@ -29,7 +29,7 @@
                 <br/><br/>
             </li>
             <li>
-                Babel : <code>@babel/cli @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-loader </code>
+                Babel : <code>@babel/cli @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-loader</code>
                 <ul>
                    <li>
                         <code>@babel/preset-react</code> : 애플리케이션 내 JSX 문법 사용을 위한 프리셋
@@ -86,8 +86,23 @@
         <pre>touch .babelrc</pre>
         <ul>
             <li>
-            .babelrc 내에 코드 추가 ↓<br/>
-                <code>{ "presets": [ "@babel/preset-react", [ "@babel/preset-env", { "modules": false, "useBuiltIns": "usage", "corejs": 3 } ], "@babel/preset-typescript" ] }</code>
+            .babelrc 내에 코드 추가, 각 구성에 대한 설명은 .babelrc 내 주석으로 기재함.<br/><br/>
+            <pre>
+{
+    "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "useBuiltIns": "usage",
+        "corejs": 3
+      }
+    ],
+    "@babel/preset-typescript"
+  ]
+}
+</pre>
             </li>
         </ul>
     </li>
@@ -95,7 +110,7 @@
     <li>
         <pre>touch webpack.common.js webpack.dev.js webpack.prod.js</pre>
         <ul>
-        <li>개발환경과 배포환경을 구분지어 webpack을 설정한다.<br/><br/></li>
+        <li>개발환경과 배포환경을 구분지어 webpack을 설정함.<br/><br/></li>
         <li>
             webpack.config.js 내에 코드 추가 ↓ <br/>
             mode는 환경에 초점을 두고 선택을 한다. "development || production"<br/>
