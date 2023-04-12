@@ -25,8 +25,17 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        type: 'asset/inline',
-        use: ['@svgr/webpack', 'url-loader'],
+        use: [
+          '@svgr/webpack',
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10240, // 10KB 이하인 svg인 경우, url-loader를 사용. limit을 지정하지 않을 경우, 8kb로 고정.
+              name: 'images/[name].[ext]?[hash]',
+              fallback: 'file-loader' // 10KB 이상인 경우, file-loader 사용.
+            },
+          },
+        ],
       },
     ],
   },
