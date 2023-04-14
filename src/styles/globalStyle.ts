@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
       :root {
       --bg-color-theme: #1E1E22;
       --font-color-theme: #ccc;
+      --icon-color-theme: #6f6f6f;
+      --hover-color-theme: #eee;
+      --reversal-color-theme: #eee;
+      
     }
   }
 
@@ -16,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
       :root {
       --bg-color-theme: #F8F7F4;
       --font-color-theme: #31302E;
+      --icon-color-theme: #6f6f6f;
+      --hover-color-theme: #9f9f9f;
+      --reversal-color-theme: #f0f1f3;
     }
   }
 
@@ -53,6 +60,10 @@ const GlobalStyle = createGlobalStyle`
     &:disabled {
 		  cursor: default;
 	  }
+  }
+
+  ul,li {
+    list-style: none;
   }
 
   table {

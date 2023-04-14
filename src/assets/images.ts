@@ -14,6 +14,15 @@ import landCard from "./images/landChronicle/utility/land_card.png";
 import holdToEarn from "./images/landChronicle/utility/nft1.png";
 import plantToEarn from "./images/landChronicle/utility/yggdrasil.png";
 import playToEarn from "./images/landChronicle/utility/Penguin-Chronicle-vs-NFT2.png";
+import perLogoBlack from "./icons/perProject/logo_main_black.svg";
+import perLogoBlack2 from "./icons/perProject/logo_main_black_cl.svg";
+import perLogoWhite from "./icons/perProject/logo_main_white.svg";
+import mainVisual from "./images/perProject/main_visual.png";
+import mainVisualMobile from "./images/perProject/main_visual_mobile.png";
+import mainPerWallet from "./images/perProject/main_klaymint.svg";
+import mainKlayMint from "./images/perProject/main_PerWallet.svg";
+import mainAgora from "./images/perProject/main_Agora.png";
+import mainChannelIn from "./images/perProject/main_channelin.png";
 
 export default {
   sec1Background,
@@ -32,4 +41,13 @@ export default {
   holdToEarn,
   plantToEarn,
   playToEarn,
+  perLogoBlack,
+  perLogoBlack2,
+  perLogoWhite,
+  mainVisual,
+  mainVisualMobile,
+  mainKlayMint,
+  mainPerWallet,
+  mainAgora,
+  mainChannelIn,
 };

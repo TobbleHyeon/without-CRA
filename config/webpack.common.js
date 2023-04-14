@@ -32,7 +32,7 @@ module.exports = {
             options: {
               limit: 10240, // 10KB 이하인 svg인 경우, url-loader를 사용. limit을 지정하지 않을 경우, 8kb로 고정.
               name: 'images/[name].[ext]?[hash]',
-              fallback: 'file-loader' // 10KB 이상인 경우, file-loader 사용.
+              fallback: 'file-loader' // 10KB 이상인 경우, url-loader 대신 file-loader 사용.
             },
           },
         ],
