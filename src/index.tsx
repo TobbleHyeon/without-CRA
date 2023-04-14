@@ -1,17 +1,19 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
+import React, { StrictMode } from "react";
 import App from "./App";
-import GlobalStyle from "./styles/globalStyle";
-import { BrowserRouter } from "react-router-dom";
+import { createRoot } from "react-dom/client";
+import { Canvas } from "@react-three/fiber";
+import "./styles.css";
+import Box from "./components/Box";
 
 const container = document.getElementById("root");
 const root = createRoot(container as Element);
 
 root.render(
-  <>
-    <BrowserRouter>
-      <GlobalStyle />
-      <App />
-    </BrowserRouter>
-  </>
+  // <BrowserRouter>
+  //   <GlobalStyle />
+  //   <App />
+  // </BrowserRouter>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );

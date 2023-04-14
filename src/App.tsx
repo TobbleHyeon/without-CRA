@@ -1,17 +1,13 @@
 import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./styles/globalStyle";
-import { lightTheme, darkTheme } from "./styles/theme";
-import Layout from "./pages/Layout";
-import Routers from "./routers";
-import ReactThreeFiber from "./pages/ReactThreeFiber";
+import { Canvas } from "@react-three/fiber";
+import Box from "./components/Box";
 
 const App = (): JSX.Element => {
   return (
-    // <Layout>
-    //   <Routers />
-    // </Layout>
-    <ReactThreeFiber />
+    <Canvas camera={{ position: [0, 0, 2] }}>
+      <Box position={[-0.75, 0, 0]} name="A" wireframe={false} />
+      <Box position={[0.75, 0, 0]} name="B" wireframe={true} />
+    </Canvas>
   );
 };
 

@@ -54,5 +54,11 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 0,
     '@typescript-eslint/prefer-rest-params': 0,
     '@typescript-eslint/naming-convention': 0,
+    'react/no-unknown-property': 0, // react-three-fiber warning 제거.
+
+    /**
+     * RTF Rules
+     */
+
   },
 };

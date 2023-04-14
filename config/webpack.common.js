@@ -37,6 +37,12 @@ module.exports = {
           },
         ],
       },
+      // favicion
+      {
+        test: /\.ico$/,
+        exclude: /node_modules/,
+        use: ['file-loader?name=[name].[ext]']
+      }
     ],
   },
   plugins: [
