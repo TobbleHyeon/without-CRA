@@ -5,10 +5,10 @@ public/*
 dist/*
 build/*
 .env
-config/*
+# config/*
 
 # Ignore all HTML files:
-*.html
+# *.html
 
 # Ignore all JS files:
-*.js
+# *.js
