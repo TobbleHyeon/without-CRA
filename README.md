@@ -42,12 +42,15 @@
             <li>
                 <code>babel-loader</code> : 웹팩에서 Babel을 사용할 수 있게 해주는 로더. 웹팩에서 자바스크립트 파일을 번들링하기 전에, babel-loader를 사용해서 ES6+ 문법을 ES5 문법으로 변환함.
             </li>
+            <li>
+                <code>react-refresh/babel</code> : React 컴포넌트를 수정할 때마다 자동으로 컴포넌트를 리로드하고, 변경사항을 적용함.
+            </li>
         </ul>
     </li>
 </ul>
 <ul>
     <li>
-        Webpack : <code>clean-webpack-plugin html-webpack-plugin terser-webpack-plugin webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge @svgr/webpack url-loader</code>
+        Webpack : <code>clean-webpack-plugin html-webpack-plugin terser-webpack-plugin webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge @svgr/webpack url-loader @pmmmwh/react-refresh-webpack-plugin</code>
         <ul>
             <li> 
                 <code>clean-webpack-plugin</code> : 웹팩 빌드 전 이전 빌드에서 생성된 파일을 제거해 줌.
@@ -69,6 +72,9 @@
             </li>
             <li>
                 <code>url-loader</code> : 이미지, 폰트, 비디오 등과 같은 파일을 자바스크립트 모듈로 변환.
+            </li>
+            <li>
+                <code>@pmmmwh/react-refresh-webpack-plugin</code> : Hot Module Replacement(HMR) 기능을 이용 해, React 라이브 리로드를 가능하게 해줌.
             </li>
         </ul>
     </li>
