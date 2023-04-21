@@ -2,7 +2,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const RefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 // BundleAnalyzer는 Bundle 최적화 용도.
@@ -16,9 +15,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          options: {
-            plugins: ["react-refresh/babel"],
-          },
+          // options: {
+          //   plugins: ["react-refresh/babel"],
+          // },
         },
       },
       {
@@ -58,8 +57,10 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: "react",
     }),
-    new CleanWebpackPlugin({}),
-    new RefreshWebpackPlugin({}),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ["**/*"],
+      verbose: true,
+    }),
   ],
   resolve: {
     alias: {

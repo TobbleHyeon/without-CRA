@@ -5,13 +5,16 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 module.exports = merge(common, {
   mode: "production",
-  devtool: "cheap-module-source-map",
+  devtool: "eval-cheap-module-source-map",
   output: {
-    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
+    filename: "[name].[contenthash].js",
+    assetModuleFilename: "static/media/[name].[contenthash].[ext]",
     publicPath: "./",
     clean: true,
   },
@@ -23,7 +26,24 @@ module.exports = merge(common, {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "static/css/[name].[contenthash].css",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public",
+          globOptions: {
+            ignore: ["**/index.html"],
+          },
+        },
+      ],
+    }),
+    new WebpackManifestPlugin({
+      fileName: "assets.manifest.json",
+    }),
+  ],
   optimization: {
     usedExports: true,
     minimize: true,

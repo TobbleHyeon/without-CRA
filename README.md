@@ -50,7 +50,7 @@
 </ul>
 <ul>
     <li>
-        Webpack : <code>clean-webpack-plugin html-webpack-plugin terser-webpack-plugin webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge @svgr/webpack url-loader @pmmmwh/react-refresh-webpack-plugin</code>
+        Webpack : <code>clean-webpack-plugin html-webpack-plugin terser-webpack-plugin webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge @svgr/webpack url-loader @pmmmwh/react-refresh-webpack-plugin webpack-manifest-plugin copy-webpack-plugin</code>
         <ul>
             <li> 
                 <code>clean-webpack-plugin</code> : 웹팩 빌드 전 이전 빌드에서 생성된 파일을 제거해 줌.
@@ -75,6 +75,12 @@
             </li>
             <li>
                 <code>@pmmmwh/react-refresh-webpack-plugin</code> : Hot Module Replacement(HMR) 기능을 이용 해, React 라이브 리로드를 가능하게 해줌.
+            </li>
+            <li>
+                <code>webpack-manifest-plugin</code> : 번들링시 생성되는 코드에 대한 정보를 json파일로 저장하여 관리.
+            </li>
+            <li>
+                <code>copy-webpack-plugin</code> : 번들링을 요하지 않는 assets의 원본 상태 그대로 build 디렉토리에 저장.
             </li>
         </ul>
     </li>
