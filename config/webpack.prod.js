@@ -10,7 +10,7 @@ const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 module.exports = merge(common, {
   mode: "production",
-  devtool: "eval-cheap-module-source-map",
+  devtool: "source-map",
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "static/js/[name].[contenthash].js",

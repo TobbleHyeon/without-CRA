@@ -35,7 +35,6 @@ const OurServices = (): JSX.Element => {
       button: "해당 페이지로 바로가기",
     },
   ];
-  console.log(serviceData);
   return (
     <Section>
       <h2>Our Services</h2>

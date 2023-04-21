@@ -34,7 +34,6 @@ const Header = (): JSX.Element => {
     alert("테마 기능 테스트 중이라 아무것도 안뜹니다.");
   }
 
-  console.log("isDarkMode", isDarkMode);
   return (
     <Style>
       <h1 className="logo">

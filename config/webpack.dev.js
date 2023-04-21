@@ -4,7 +4,7 @@ const RefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
-  devtool: "inline-source-map",
+  devtool: "eval-source-map",
   plugins: [new RefreshWebpackPlugin()],
   devServer: {
     open: false, // dev server 구동 후 브라우저 열기
