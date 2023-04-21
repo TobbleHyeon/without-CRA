@@ -13,7 +13,7 @@ module.exports = merge(common, {
   devtool: "eval-cheap-module-source-map",
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: "[name].[contenthash].js",
+    filename: "static/js/[name].[contenthash].js",
     assetModuleFilename: "static/media/[name].[contenthash].[ext]",
     publicPath: "./",
     clean: true,
