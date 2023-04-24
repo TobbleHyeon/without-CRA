@@ -37,9 +37,9 @@ without CRA
 | CSS                  | <code>sass</code>                                                                                                                          |
 | etc                  | <code>core-js</code>                                                                                                                       |
 
-- <code>webpack-dev-server</code>: 개발용 서버를 제공하며, 코드를 수정할 때마다 브라우저를 자동으로 새로고침함.
-- <code>webpack-merge</code> : 웹팩 설정 파일을 합침.
-- <code>webpack-bundle-analyzer</code> : 웹팩 빌드 결과물의 크기 분석. 이를 통해 불필요한 모듈이나 파일을 식별해서 최적화를 도와줌.
+- <code>webpack-dev-server</code>: 개발용 서버를 제공하고, 코드를 수정할 때마다 브라우저를 자동으로 새로고침함.
+- <code>webpack-merge</code> : 다수의 웹팩 설정 파일을 합침.
+- <code>webpack-bundle-analyzer</code> : 번들 크기와 구성을 시각적으로 보여줌.
 
 - <code>babel-loader</code> : 웹팩에서 Babel을 사용할 수 있게 해주는 로더. 자바스크립트 코드 컴파일.
 - <code>sass-loader</code> : Sass(SCSS) 파일을 CSS로 변환하여 처리.
@@ -49,7 +49,7 @@ without CRA
 - <code>@svgr/webpack</code> : SVG 파일을 로드하고 React 컴포넌트로 변환.
 
 - <code>html-webpack-plugin</code> : 웹팩에서 HTML 파일을 생성하고, 빌드된 자바스크립트, CSS 파일을 자동으로 로드하도록 설정.
-- <code>mini-css-extract-plugin</code> : CSS를 별도의 파일로 추출하는 플러그인.
+- <code>mini-css-extract-plugin</code> : JavaScript에서 생성된 CSS를 별도의 파일로 분리하여 번들링함.
 - <code>copy-webpack-plugin</code> : 번들링을 요하지 않는 assets의 원본 상태 그대로 build 디렉토리에 저장.
 
 - <code>css-minimizer-webpack-plugin</code> : CSS 파일을 압축하여 파일 크기를 줄이는 플러그인.
