@@ -4,12 +4,12 @@
 
 <br/>
 
-### 구성 버전
+### 1. 구성 버전
 
 `webpack v5.77.0`, `babel v7.21.3`, `react v18.2.0` <br/>
 **버전에 따라 deprecated 된 패키지가 있으므로 유의해야 함.**
 
-### webpack 구성
+### 2. webpack 구성
 
 개발/배포환경에 맞는 모듈, output 처리가 될 수 있도록 `webpack-merge` 를 사용해서 파일을 분할.<br/>
 
@@ -26,7 +26,16 @@ without CRA
 
 ```
 
-4. webpack & babel을 구성하기 위한 Install 목록
+### 3. webpack & babel을 구성하기 위한 Install 목록
+
+| 구분                 | 모듈                                                                                                                         |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Webpack              | <code>webpack webpack-cli webpack-dev-server webpack-merge webpack-bundle-analyzer</code>                                    |
+| Webpack-Loader       | <code>babel-loader sass-loader postcss-loader css-loader style-loader</code>                                                 |
+| Webpack-Plugin       | <code>html-webpack-plugin mini-css-extract-plugin copy-webpack-plugin</code>                                                 |
+| Webpack-Optimization | <code>css-minimizer-webpack-plugin @pmmmwh/react-refresh-webpack-plugin terser-webpack-plugin webpack-manifest-plugin</code> |
+| Babel                | <code>@babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/preset-typescript</code>                           |
+| etc                  | ggg                                                                                                                          |
 
 - React + Typescript : <code>react react-dom typescript @types/react @types/react-dom</code><br/>
 <ul>
@@ -72,7 +81,7 @@ without CRA
 </ul>
 <ul>
     <li>
-        Webpack : <code>clean-webpack-plugin html-webpack-plugin terser-webpack-plugin webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge @svgr/webpack url-loader @pmmmwh/react-refresh-webpack-plugin webpack-manifest-plugin copy-webpack-plugin</code>
+        Webpack : <code>clean-webpack-plugin html-webpack-plugin terser-webpack-plugin webpack webpack-bundle-analyzer webpack-cli webpack-dev-server webpack-merge @svgr/webpack @pmmmwh/react-refresh-webpack-plugin webpack-manifest-plugin copy-webpack-plugin</code>
         <ul>
             <li> 
                 <code>clean-webpack-plugin</code> : 웹팩 빌드 전 이전 빌드에서 생성된 파일을 제거해 줌.
@@ -91,9 +100,6 @@ without CRA
             </li>
             <li>
                 <code>@svgr/webpack</code> : SVG 파일을 로드하고 React 컴포넌트로 변환.
-            </li>
-            <li>
-                <code>url-loader</code> : 이미지, 폰트, 비디오 등과 같은 파일을 자바스크립트 모듈로 변환.
             </li>
             <li>
                 <code>@pmmmwh/react-refresh-webpack-plugin</code> : Hot Module Replacement(HMR) 기능을 이용 해, React 라이브 리로드를 가능하게 해줌.

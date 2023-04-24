@@ -1,5 +1,5 @@
 import images from "@/assets/images";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import logo from "@/assets/icons/perProject/logo_main_black_cl.svg";
 import { Link } from "react-router-dom";

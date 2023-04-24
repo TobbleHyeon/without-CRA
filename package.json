@@ -12,7 +12,8 @@
   },
   "author": "",
   "browserslist": [
-    "ie 11"
+    "> 1%",
+    "last 2 versions"
   ],
   "keywords": [],
   "license": "ISC",
@@ -42,7 +43,6 @@
     "@typescript-eslint/parser": "^5.57.0",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
-    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.29.1",
     "css-loader": "^6.7.3",
@@ -54,7 +54,9 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss": "^8.4.23",
+    "postcss-fail-on-warn": "^0.2.1",
     "postcss-loader": "^7.2.4",
+    "postcss-scss": "^4.0.6",
     "prettier": "^2.8.7",
     "react-refresh": "^0.14.0",
     "sass": "^1.60.0",

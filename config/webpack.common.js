@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 // BundleAnalyzer는 Bundle 최적화 용도.
@@ -55,15 +54,20 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: "react",
     }),
-    new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ["**/*"],
-      verbose: true,
-    }),
   ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "../src/"),
     },
-    extensions: [".js", ".ts", ".jsx", ".tsx", ".css", ".scss", ".json"],
+    extensions: [
+      ".html",
+      ".js",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".css",
+      ".scss",
+      ".json",
+    ],
   },
 };

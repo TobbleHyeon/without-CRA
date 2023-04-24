@@ -16,7 +16,7 @@ module.exports = merge(common, {
     filename: "static/js/[name].[contenthash].js",
     assetModuleFilename: "static/media/[name].[contenthash].[ext]",
     publicPath: "./",
-    clean: true,
+    clean: true, // webpack-5 output 기본속성, clean-webpack-plugin 대체
   },
   module: {
     rules: [

@@ -28,6 +28,10 @@ module.exports = merge(common, {
       {
         test: /\.(sa|sc|c)ss$/i,
         use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+        // 1. 작성한 scss를 sass-loader를 통해 컴파일 한다.
+        // 2. postcss-loader를 통해 브라우저에 따라 알맞는 css로 컴파일 한다.
+        // 3. 컴파일된 css를 css-loader로 읽는다.
+        // 4. css-loader로 읽힌 css를 style-loader를 통해 index.html에 삽입한다.
       },
     ],
   },
