@@ -8,3 +8,26 @@ declare module "*.jpeg";
 declare module "*.png";
 declare module "*.gif";
 declare module "*.svg";
+
+// svg URL화, component화 처리.
+declare module "*.svg?url" {
+  const content: any;
+  export default content;
+}
+
+declare module "*.svg" {
+  import React = require("react");
+
+  export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
+  const src: string;
+  export default src;
+}
+
+// declare module "*.svg" {
+//   import React = require("react");
+//   export const ReactComponent: React.FunctionComponent<
+//     React.SVGProps<SVGSVGElement>
+//   >;
+//   const src: string;
+//   export default src;
+// }

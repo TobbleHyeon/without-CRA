@@ -15,38 +15,36 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          // options: {
-          //   plugins: ["react-refresh/babel"],
-          // },
         },
       },
+      // {
+      //   test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+      //   type: "asset/resource",
+      // },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: "asset/resource",
+        test: /\.(jpe?g|gif|png|webp|bmp)$/,
+        type: "asset",
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
       },
       {
-        test: /\.svg$/,
-        use: [
-          "@svgr/webpack",
-          {
-            loader: "url-loader",
-            options: {
-              limit: 10240, // 10KB 이하인 svg인 경우, url-loader를 사용. limit을 지정하지 않을 경우, 8kb로 고정.
-              name: "images/[name].[ext]?[hash]",
-              fallback: "file-loader", // 10KB 이상인 경우, url-loader 대신 file-loader 사용.
-            },
-          },
-        ],
+        test: /\.svg$/i,
+        type: "asset",
+        resourceQuery: /url/, // *.svg?url
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
+        use: ["@svgr/webpack"],
       },
       // favicion
       {
         test: /\.ico$/,
         exclude: /node_modules/,
-        use: ["file-loader?name=[name].[ext]"],
+        type: "asset/resource",
       },
     ],
   },

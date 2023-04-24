@@ -1,10 +1,32 @@
 # without-CRA
 
-### typescript + sass 기반 초기환경 셋팅
+### react + typescript + sass를 베이스로 삼아, React 템플릿 구성
 
-1. <pre>mkdir kill-cra-react && cd $_</pre>
-2. <pre>npm init -y</pre>
-3. webpack & babel을 구성하기 위한 Install 목록
+<br/>
+
+### 구성 버전
+
+`webpack v5.77.0`, `babel v7.21.3`, `react v18.2.0` <br/>
+**버전에 따라 deprecated 된 패키지가 있으므로 유의해야 함.**
+
+### webpack 구성
+
+개발/배포환경에 맞는 모듈, output 처리가 될 수 있도록 `webpack-merge` 를 사용해서 파일을 분할.<br/>
+
+```bash
+without CRA
+├── config
+│   ├── webpack.common.js # dev, prod 모두 common을 머지하고 있음.
+│   ├── webpack.dev.js
+│   └── webpack.prod.js
+├── dist
+├── node_modules
+├── pulbic
+└── src
+
+```
+
+4. webpack & babel을 구성하기 위한 Install 목록
 
 - React + Typescript : <code>react react-dom typescript @types/react @types/react-dom</code><br/>
 <ul>
@@ -15,7 +37,7 @@
                 <code>css-loader</code> : 자바스크립트 모듈로 CSS를 가져와 컴포넌트에 적용하는 용도. CSS 파일 모듈화.
             </li>
             <li>
-                <code>mini-css-extract-plugin</code> : 웹팩에서 CSS 파일을 번들링하기 위한 플러그인. 캐싱과 최적화 개선 목적.
+                <code>mini-css-extract-plugin</code> : 웹팩에서 CSS 파일을 번들링 하기 위한 플러그인. 캐싱과 최적화 개선 목적.
             </li>
             <li>
                 <code>style-loader</code> : 스타일시트를 자바스크립트 코드로 변환하여 동적으로 삽입.

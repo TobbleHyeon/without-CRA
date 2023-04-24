@@ -26,7 +26,7 @@ const Circle = (props: PROPS): JSX.Element => {
       </div>
       <button onClick={noFunction}>
         <span>{props.button}</span>
-        <icons.arrowRight />
+        <icons.ArrowRight />
       </button>
     </Li>
   );
