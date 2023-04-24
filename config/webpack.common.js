@@ -7,6 +7,7 @@ const webpack = require("webpack");
 
 module.exports = {
   entry: `${path.resolve(__dirname, "../src")}/index.tsx`,
+  stats: "minimal", // run 시, 필수 정보만 출력함. // "none", "errors-only", "normal", "verbose"
   module: {
     rules: [
       {
@@ -53,6 +54,9 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       React: "react",
+    }),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: "development",
     }),
   ],
   resolve: {
